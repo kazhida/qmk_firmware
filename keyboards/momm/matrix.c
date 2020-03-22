@@ -47,23 +47,22 @@ uint8_t pca9555_readPins(uint8_t slave_addr, uint8_t port);
 #define TIMEOUT 100
 
 enum {
-  CMD_INPUT_0 = 0,
-  CMD_INPUT_1,
-  CMD_OUTPUT_0,
-  CMD_OUTPUT_1,
-  CMD_INVERSION_0,
-  CMD_INVERSION_1,
-  CMD_CONFIG_0,
-  CMD_CONFIG_1
+    CMD_INPUT_0 = 0,
+    CMD_INPUT_1,
+    CMD_OUTPUT_0,
+    CMD_OUTPUT_1,
+    CMD_INVERSION_0,
+    CMD_INVERSION_1,
+    CMD_CONFIG_0,
+    CMD_CONFIG_1
 };
 
 void pca9555_init(uint8_t slave_addr) {
-  static uint8_t s_init = 0;
-  if (!s_init) {
-    i2c_init();
-
-    s_init=1;
-  }
+    static uint8_t s_init = 0;
+    if (!s_init) {
+        i2c_init();
+        s_init=1;
+    }
 
   // TODO: could check device connected
   //i2c_start(SLAVE_TO_ADDR(slave) | I2C_WRITE);
@@ -242,6 +241,10 @@ static uint16_t read_cols(void) {
   return ~((state_2 << 8) | state_1);
 }
 
+/*
+
+
+ */
 static bool read_cols_on_row(matrix_row_t current_matrix[], uint8_t current_row) {
   // Store last value of row prior to reading
   matrix_row_t last_row_value = current_matrix[current_row];

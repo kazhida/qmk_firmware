@@ -3,6 +3,6 @@
 //
 #include QMK_KEYBOARD_H
 
-PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT(KC_H, KC_J, KC_K, KC_L)
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+    LAYOUT(KC_H, KC_J, KC_K, KC_L)
 };

@@ -18,7 +18,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 #include "config_common.h"
-#include <serial_config.h>
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xFEED
@@ -35,7 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* key matrix size */
 #define MATRIX_ROWS 1
-#define MATRIX_COLS 4
+#define MATRIX_COLS 16  // fixed 16bit for TCA9555, TCA9554, PCA9555, PCA9554, PCA9538
 
 /*
  * Keyboard Matrix Assignments
