@@ -101,7 +101,6 @@ uint8_t pca9555_readPins(uint8_t slave_addr, uint8_t port) {
   return data;
 }
 
-//---- custom_matrix_helper.c ----
 //_____COMMON__________________________________________________________________
 // user-defined overridable functions
 __attribute__((weak)) void matrix_init_kb(void) { matrix_init_user(); }
